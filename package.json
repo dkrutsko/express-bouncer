@@ -1,0 +1,49 @@
+{
+	"name"				: "express-bouncer",
+	"description"		: "Express middleware for mitigating brute-force requests",
+	"version"			: "0.1.0",
+	"main"				: "./index.js",
+	"license"			: "ZLIB",
+
+	"author" :
+	{
+		"name"			: "David Krutsko",
+		"email"			: "dave@krutsko.net",
+		"url"			: "dave.krutsko.net"
+	},
+
+	"contributors" :
+	[
+		{
+			"name"		: "David Krutsko",
+			"email"		: "dave@krutsko.net",
+			"url"		: "dave.krutsko.net"
+		}
+	],
+
+	"repository" :
+	{
+		"type"			: "git",
+		"url"			: "https://github.com/dkrutsko/Express-Bouncer.git"
+	},
+
+	"bugs" :
+	{
+		"url"			: "https://github.com/dkrutsko/Express-Bouncer/issues"
+	},
+
+	"keywords" :
+	[
+		"brute",
+		"force",
+		"attack",
+		"mitigation",
+		"middleware",
+		"security"
+	],
+
+	"engines" :
+	{
+		"node"			: ">= 0.8.0"
+	}
+}
