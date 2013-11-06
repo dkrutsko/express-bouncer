@@ -24,12 +24,12 @@
 	"repository" :
 	{
 		"type"			: "git",
-		"url"			: "https://github.com/dkrutsko/Express-Bouncer.git"
+		"url"			: "https://github.com/dkrutsko/express-bouncer.git"
 	},
 
 	"bugs" :
 	{
-		"url"			: "https://github.com/dkrutsko/Express-Bouncer/issues"
+		"url"			: "https://github.com/dkrutsko/express-bouncer/issues"
 	},
 
 	"keywords" :
