@@ -1,6 +1,6 @@
 {
 	"name"				: "express-bouncer",
-	"description"		: "Express middleware for mitigating brute-force requests",
+	"description"		: "Express middleware for mitigating brute-force attacks",
 	"version"			: "0.1.0",
 	"main"				: "./index.js",
 	"license"			: "ZLIB",
