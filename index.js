@@ -101,9 +101,10 @@ function bouncer (min, max, free)
 
 	this.reset = function (req)
 	{
-		var address =
+		var address; try { address =
 			req.headers["x-forwarded-for"] || req.connection.remoteAddress ||
 			req.socket.remoteAddress || req.connection.socket.remoteAddress;
+		} catch (error) { }
 
 		// Remove the current address from block list
 		address && delete instance.addresses[address];
@@ -114,9 +115,10 @@ function bouncer (min, max, free)
 
 	this.block = function (req, res, next)
 	{
-		var address =
+		var address; try { address =
 			req.headers["x-forwarded-for"] || req.connection.remoteAddress ||
 			req.socket.remoteAddress || req.connection.socket.remoteAddress;
+		} catch (error) { }
 
 		// Allow any invalid or white-listed IP addresses
 		if (!address || instance.whitelist.indexOf (address) > -1)
