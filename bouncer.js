@@ -1,14 +1,16 @@
 ////////////////////////////////////////////////////////////////////////////////
 // -------------------------------------------------------------------------- //
 //                                                                            //
-//                        (C) 2012-2013  David Krutsko                        //
+//                        (C) 2013-2014  David Krutsko                        //
 //                        See LICENSE.md for copyright                        //
 //                                                                            //
 // -------------------------------------------------------------------------- //
 ////////////////////////////////////////////////////////////////////////////////
 
+"use strict";
+
 //----------------------------------------------------------------------------//
-// Functions                                                                  //
+// Application                                                                //
 //----------------------------------------------------------------------------//
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -51,7 +53,7 @@ function bouncer (min, max, free)
 			delays.push (max);
 			break;
 		}
-		
+
 		delays.push (value);
 	}
 
@@ -131,7 +133,7 @@ function bouncer (min, max, free)
 		// Compute the wait time remaining
 		var remaining = fail.lastAttempt +
 			delays[fail.count] - Date.now();
-			
+
 		if (remaining > 0)
 			// Stop current request from going through
 			instance.blocked (req, res, next, remaining);

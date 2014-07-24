@@ -1,16 +1,10 @@
 {
 	"name"				: "express-bouncer",
-	"description"		: "Express middleware for mitigating brute-force attacks",
-	"version"			: "0.1.2",
-	"main"				: "./index.js",
-	"license"			: "ZLIB",
+	"version"			: "0.1.3",
+	"license"			: "Zlib",
+	"main"				: "bouncer.js",
 
-	"author" :
-	{
-		"name"			: "David Krutsko",
-		"email"			: "dave@krutsko.net",
-		"url"			: "dave.krutsko.net"
-	},
+	"description"		: "Express middleware for mitigating brute-force attacks",
 
 	"contributors" :
 	[
@@ -44,6 +38,6 @@
 
 	"engines" :
 	{
-		"node"			: ">= 0.8.0"
+		"node"			: ">= 0.10.0"
 	}
 }

@@ -5,7 +5,7 @@
 <p align="justify">A simple and standalone middleware for <a href="https://github.com/visionmedia/express">express</a> routes which attempts to mitigate brute-force attacks. It works by increasing the delay with each failed request using a Fibonacci formula. Requests are tracking via IP address and can be white-listed or reset on demand. All logged addresses are stored locally in an object and dormant addresses are removed automatically. Error messages are also completely customizable. This project is based on <a href="https://github.com/AdamPflug/express-brute">express-brute</a> created by <a href="https://github.com/AdamPflug">Adam Pflug</a>.</p>
 
 ### Installation
-```js
+```shell
 $ npm install express-bouncer
 ```
 
