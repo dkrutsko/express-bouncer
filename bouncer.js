@@ -1,7 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // -------------------------------------------------------------------------- //
 //                                                                            //
-//                        (C) 2013-2014  David Krutsko                        //
+//                        (C) 2013-2016  David Krutsko                        //
 //                        See LICENSE.md for copyright                        //
 //                                                                            //
 // -------------------------------------------------------------------------- //
@@ -88,7 +88,7 @@ function bouncer (min, max, free)
 
 	this.blocked = function (req, res, next, remaining)
 	{
-		res.send (403, "Too many requests have been made, " +
+		res.send (429, "Too many requests have been made, " +
 			"please wait " + remaining / 1000 + " seconds");
 	};
 
