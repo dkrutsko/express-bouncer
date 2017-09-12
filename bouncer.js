@@ -88,7 +88,7 @@ function bouncer (min, max, free)
 
 	this.blocked = function (req, res, next, remaining)
 	{
-		res.send (429, "Too many requests have been made, " +
+		res.status(429).send ("Too many requests have been made, " +
 			"please wait " + remaining / 1000 + " seconds");
 	};
 
