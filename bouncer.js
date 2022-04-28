@@ -57,7 +57,9 @@ function bouncer (min, max, free)
 		delays.push (value);
 	}
 
-	setInterval (function() {
+	var terminated = false;
+
+	var intervalId = setInterval (function() {
 		var now = Date.now();
 		// Remove any possible dormant addresses
 		for (var address in instance.addresses) {
@@ -112,11 +114,26 @@ function bouncer (min, max, free)
 		address && delete instance.addresses[address];
 	};
 
+
+	////////////////////////////////////////////////////////////////////////////////
+	/// Terminate the bouncer. After termination, no requests will be blocked
+	this.terminate = function() {
+		terminated = true
+        this.addresses = { };
+		clearInterval(intervalId);
+	}
+
+
 	////////////////////////////////////////////////////////////////////////////////
 	/// Middleware that will block requests which are occurring too often.
 
 	this.block = function (req, res, next)
 	{
+		if (terminated)
+        {
+			// Do not block any requests
+			typeof next === "function" && next(); return;
+		}
 		var address; try { address =
 			req.headers["x-forwarded-for"] || req.connection.remoteAddress ||
 			req.socket.remoteAddress || req.connection.socket.remoteAddress;
