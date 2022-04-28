@@ -118,7 +118,7 @@ function bouncer (min, max, free)
 	////////////////////////////////////////////////////////////////////////////////
 	/// Terminate the bouncer. After termination, no requests will be blocked
 	this.terminate = function() {
-		terminated = true
+		terminated = true;
         this.addresses = { };
 		clearInterval(intervalId);
 	}
